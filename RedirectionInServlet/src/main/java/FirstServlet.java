@@ -20,7 +20,7 @@ public class FirstServlet extends HttpServlet {
 		System.out.println("control in first Servlet");
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/SecondServlet");
-		rd.include(request, response);
+		rd.forward(request, response);
 		
 		PrintWriter writer = response.getWriter();
 		writer.println("<h1>this is first servlet</h1>");
