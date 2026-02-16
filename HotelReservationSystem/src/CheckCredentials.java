@@ -13,13 +13,13 @@ public class CheckCredentials {
 	public boolean check( String email , String pass) throws SQLException {
 		
 		Statement stmt = con.createStatement();
-		String query = "select id from authentication where email = '"+email+"' and password ='"+pass+"';";
+		String query = "select email , pass from authentication where email = '"+email+"' and password ='"+pass+"';";
 		ResultSet rs = stmt.executeQuery(query);
 
-        if (rs.next()) {   // if at least one record found
+        if (rs.next()) {   
             return true;
         }
-
+        
         return false;
 	}
 	
