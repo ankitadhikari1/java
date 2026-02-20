@@ -17,8 +17,11 @@
         <!-- FORMAT SQL (optional but recommended) -->
         <property name="hibernate.format_sql">true</property>
         
-        
+        <!--for mapping classes  -->
         <mapping class = "com.ankit.model.Student"/>
+        
+        
+        
         
         
         
