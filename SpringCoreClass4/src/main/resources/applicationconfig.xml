@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="java" class="services.Java" />
+	<bean id="sb" class="services.SpringBoot" />
+
+	<bean id="telusko" class="services.Telusko">
+		<!-- this is used for setter injetion -->
+		<!-- <property ref = "java" name="course"></property> -->
+
+
+
+		<!-- this is used for constructor injection -->
+		<constructor-arg ref = "java" name="course"></constructor-arg>
+
+
+	</bean>
+
+
+
+
+</beans>
