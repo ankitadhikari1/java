@@ -7,19 +7,28 @@
        http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="java" class="services.Java" />
+	<!-- <bean id="java" class="services.Java" />
+	<bean id="sb" class="services.SpringBoot" primary="true"/>
+	<bean id="telusko" class="services.Telusko" autowire="byType"/> -->
+	
+	
+	
+	<!-- <bean id="java" class="services.Java" autowire-candidate="false"/>
 	<bean id="sb" class="services.SpringBoot" />
-
-	<bean id="telusko" class="services.Telusko">
-		<!-- this is used for setter injetion -->
-		<!-- <property ref = "java" name="course"></property> -->
-
-
-
-		<!-- this is used for constructor injection -->
-		<constructor-arg ref = "java" name="course"></constructor-arg>
-
-
+	<bean id="telusko" class="services.Telusko" autowire="constructor"/> -->
+	
+	
+	
+	<!-- <bean id="java" class="services.Java" autowire-candidate="false"/>
+	<bean id="course" class="services.SpringBoot" />
+	<bean id="sb" class="services.Telusko" autowire="byName"/> -->
+	
+	
+	
+	<bean id="java" class="services.Java" autowire-candidate="false"/>
+	<bean id="course" class="services.SpringBoot" />
+	<bean id="telusko" class="services.Telusko" autowire="no">
+		<property ref="java" name = "course"></property>
 	</bean>
 
 

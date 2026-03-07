@@ -11,16 +11,16 @@ public class LaunchApplication {
 		
 		ApplicationContext container = new ClassPathXmlApplicationContext("applicationconfig.xml");
 		
-//		Telusko t = container.getBean(Telusko.class);
-//		Boolean status = t.buyTheCourse(444.4);
-//		
-//		if(status) {
-//			System.out.println("course purchased successfull");
-//		}
-//		else {
-//			System.out.println("something went wrong");
-//		}
-//		 
+		Telusko t = container.getBean(Telusko.class);
+		Boolean status = t.buyTheCourse(444.4);
+		
+		if(status) {
+			System.out.println("course purchased successfull");
+		}
+		else {
+			System.out.println("something went wrong");
+		}
+		 
 
 	}
 

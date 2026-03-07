@@ -18,7 +18,7 @@ public class Telusko {
 	
 
 	public void setCourse(ICourse course) {
-		System.out.println("setter injection");
+		System.out.println("this is setter injection");
 		this.course = course;
 	}
 
