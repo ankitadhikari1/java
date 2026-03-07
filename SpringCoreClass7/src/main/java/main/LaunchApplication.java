@@ -1,0 +1,22 @@
+package main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import services.Employee;
+
+public class LaunchApplication {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext container = new ClassPathXmlApplicationContext("applicationconfig.xml");
+		
+		Employee e1 = container.getBean(Employee.class);
+		System.out.println(e1);
+		System.out.println(e1.employeeTask());
+		
+		
+
+	}
+
+}
